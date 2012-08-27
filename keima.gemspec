@@ -4,8 +4,8 @@ require File.expand_path('../lib/keima/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["suer"]
   gem.email         = ["suetsugu.r@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{a keima ruby client}
+  gem.summary       = %q{a keima ruby client}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
@@ -14,4 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "keima"
   gem.require_paths = ["lib"]
   gem.version       = Keima::VERSION
+
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rspec"
 end
