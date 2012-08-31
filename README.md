@@ -1,6 +1,4 @@
-# Keima
-
-TODO: Write a gem description
+# Keima Ruby API
 
 ## Installation
 
@@ -8,22 +6,26 @@ Add this line to your application's Gemfile:
 
     gem 'keima'
 
-And then execute:
-
-    $ bundle
-
 Or install it yourself as:
 
     $ gem install keima
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'rubygems'
+    require 'keima'
+    
+    client = Keima::Client.new("keima base url", "api key")
+    client.publish("channel name", "event name", {:message => "test"})
 
-## Contributing
+## Build
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    $ bundle exec rake build
+
+## Test
+
+    $ bundle exec rspec
+
+## License
+
+See LICENSE file
