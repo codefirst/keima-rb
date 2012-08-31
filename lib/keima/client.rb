@@ -11,19 +11,12 @@ module Keima
     end
 
     def publish(channel, name, data)
+p data.to_json
       post(publish_url, {
         :channel => channel,
         :name    => name,
-        :data    => to_json(data)
+        :data    => data.to_json
       })
-    end
-
-    def to_json(data)
-      body = '{'
-      body << (data.keys.inject [] do |params, key|
-        params << "\"#{key.to_s}\":\"#{data[key]}\""
-      end.join(','))
-      body << '}'
     end
 
     def post(url, params)
