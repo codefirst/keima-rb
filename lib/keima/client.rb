@@ -10,8 +10,12 @@ module Keima
       @base_url + "/publish/" + @appkey
     end
 
+    def jsFiles
+      [ @base_url + '/socket.io/socket.io.js',
+        @base_url + '/javascripts/keima.js' ]
+    end
+
     def publish(channel, name, data)
-p data.to_json
       post(publish_url, {
         :channel => channel,
         :name    => name,
