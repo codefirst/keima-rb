@@ -1,5 +1,7 @@
 # Keima Ruby API
 
+[![wercker status](https://app.wercker.com/status/0baa2e648395968f840ab08abaa6c4ae/s/ "wercker status")](https://app.wercker.com/project/bykey/0baa2e648395968f840ab08abaa6c4ae)
+
 ## Installation
 
 Add this line to your application's Gemfile:
