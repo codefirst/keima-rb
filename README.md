@@ -1,5 +1,6 @@
 # Keima Ruby API
 
+[![Gem Version](https://badge.fury.io/rb/keima.svg)](http://badge.fury.io/rb/keima)
 [![wercker status](https://app.wercker.com/status/0baa2e648395968f840ab08abaa6c4ae/s/ "wercker status")](https://app.wercker.com/project/bykey/0baa2e648395968f840ab08abaa6c4ae)
 
 ## Installation
