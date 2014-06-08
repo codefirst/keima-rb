@@ -26,8 +26,10 @@ module Keima
     def post(url, params)
       uri = URI.parse(url)
       body = params.map{|key,value| "#{escape(key.to_s)}=#{escape(value)}" }.join('&')
-      Net::HTTP.start(uri.host, uri.port) do |http|
-        http.post(uri.path, body)
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = uri.scheme == 'https'
+      http.start do |connection|
+        connection.post(uri.path, body)
       end
     end
 
