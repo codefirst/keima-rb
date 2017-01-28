@@ -1,6 +1,4 @@
-box: wercker/rvm
-services:
-  - wercker/postgresql
+box: ruby:2.4
 build:
     steps:
         - bundle-install
